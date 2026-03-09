@@ -1,37 +1,20 @@
 ---
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Home";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>marktripney | {pageTitle}</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-      </nav>
-    </header>
-    <main class="font-interphases text-lg">
-      <div class="mx-auto md:w-2xl">
-        <h1 class="font-firs text-6xl font-medium">Hi, I'm Mark.</h1>
-        <p>Intro text here...</p>
-        <h2>Posts</h2>
-        <p>Recent posts here...</p>
-        <ul>
-          <li><a href="/posts/post-1">Post 1</a></li>
-          <li><a href="/posts/post-2">Post 2</a></li>
-          <li><a href="/posts/post-3">Post 3</a></li>
-        </ul>
-      </div>
-    </main>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h1 class="font-firs text-6xl font-semibold">Hi, I'm Mark.</h1>
+  <h2 class="font-firs text-4xl font-medium">
+    I write about books and videogames.
+  </h2>
+  <p>Intro text here...</p>
+  <h2>Posts</h2>
+  <p>Recent posts here...</p>
+  <ul>
+    <li><a href="/posts/post-1">Post 1</a></li>
+    <li><a href="/posts/post-2">Post 2</a></li>
+    <li><a href="/posts/post-3">Post 3</a></li>
+  </ul>
+</BaseLayout>
