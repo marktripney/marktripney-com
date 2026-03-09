@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+
+const pageTitle = "About";
 ---
 
 <html lang="en">
@@ -9,18 +11,20 @@ import "../styles/global.css";
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>marktripney | about</title>
+    <title>marktripney | {pageTitle}</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-      </nav>
-    </header>
-    <main>
-      <h1>About me</h1>
-      <p>'About' content here...</p>
-    </main>
+    <div class="mx-auto md:w-2xl">
+      <header>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+        </nav>
+      </header>
+      <main>
+        <h1 class="text-amber-600">About me</h1>
+        <p>'About' content here...</p>
+      </main>
+    </div>
   </body>
 </html>
