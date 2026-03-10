@@ -15,11 +15,11 @@ const { pageTitle } = Astro.props;
     <title>marktripney | {pageTitle}</title>
   </head>
   <body>
-    <div class="mx-auto w-9/10 text-lg md:w-2xl">
+    <div class="mx-auto flex h-screen w-9/10 flex-col text-lg md:w-2xl">
       <header>
         <HeaderNav />
       </header>
-      <main><slot /></main>
+      <main class="grow"><slot /></main>
       <Footer />
     </div>
   </body>
